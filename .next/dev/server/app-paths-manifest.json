@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/blog/route": "app/api/blog/route.js",
+  "/api/newsletter/route": "app/api/newsletter/route.js",
+  "/api/pricing/route": "app/api/pricing/route.js",
+  "/api/programs/route": "app/api/programs/route.js",
+  "/api/schedule/route": "app/api/schedule/route.js",
+  "/api/testimonials/route": "app/api/testimonials/route.js",
+  "/api/trainers/route": "app/api/trainers/route.js",
+  "/blog/page": "app/blog/page.js",
+  "/cenovnik/page": "app/cenovnik/page.js",
+  "/clenstvo/page": "app/clenstvo/page.js",
+  "/galerija/page": "app/galerija/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
+  "/page": "app/page.js",
+  "/raspored/page": "app/raspored/page.js",
+  "/tim/page": "app/tim/page.js",
+  "/uslugi/page": "app/uslugi/page.js",
+  "/za-nas/page": "app/za-nas/page.js"
+}

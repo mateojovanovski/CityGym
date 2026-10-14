@@ -1,3 +1,4 @@
+
 services:
   web:
     build: .
@@ -5,6 +6,25 @@ services:
     mem_limit: 512m
     environment:
       NODE_ENV: production
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/citygym
+    depends_on:
+      db:
+        condition: service_healthy
     expose:
       - "3000"
+
+  db:
+    image: postgres:16-alpine
+    cpus: 0.5
+    mem_limit: 256m
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: citygym
+    volumes:
+      - ./.stack-data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d citygym"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

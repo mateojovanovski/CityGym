@@ -1,4 +1,4 @@
-
+```dockerfile
 FROM node:22-alpine
 
 WORKDIR /app
@@ -8,8 +8,11 @@ RUN npm ci
 
 COPY . .
 
+ENV DATABASE_URL="postgresql://postgres:postgres@db:5432/citygym"
+
 RUN npm run build
 
 EXPOSE 3000
 
 CMD ["npm", "run", "start"]
+```

@@ -1,8 +1,8 @@
-
 services:
   web:
     build: .
-    restart: unless-stopped
+    cpus: 1.0
+    mem_limit: 512m
     environment:
       NODE_ENV: production
       DATABASE_URL: ${DATABASE_URL}

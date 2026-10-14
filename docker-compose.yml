@@ -2,7 +2,7 @@
 services:
   web:
     build: .
-    cpus: 0.5
+    cpus: 0.25
     mem_limit: 512m
     environment:
       NODE_ENV: production

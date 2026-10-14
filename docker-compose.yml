@@ -1,0 +1,10 @@
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: ${DATABASE_URL}
+    expose:
+      - "3000"
